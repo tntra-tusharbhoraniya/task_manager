@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all
+  @tasks = Task.where("title = '#{params[:title]}'")
   end
 
   # GET /tasks/1 or /tasks/1.json
